@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AulaSobreposicao.Entidades;
+using System;
 
 namespace AulaSobreposicao
 {
@@ -6,7 +7,16 @@ namespace AulaSobreposicao
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ContaXY accxy = new ContaXY(222, "Ronaldo", 500);
+            ContaX accx = new ContaX(524, "Felipe", 500);
+
+            accxy.Saque(50.00);
+            accx.Saque(50.00);
+
+
+            Console.WriteLine(accxy.SaldoConta);
+            Console.WriteLine(accx.SaldoConta);
+
         }
     }
 }
