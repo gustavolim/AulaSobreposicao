@@ -4,11 +4,16 @@ using System.Text;
 
 namespace AulaSobreposicao.Entidades
 {
-    class ContaXY : Conta
+    sealed class ContaXY : Conta
     {
         public double TaxaJuros { get; set; }
 
-        public ContaXY(int numero, string proprietario, double saldoConta) 
+        public ContaXY()
+        {
+
+        }
+
+        public ContaXY(int numero, string proprietario, double saldoConta)
             : base(numero, proprietario, saldoConta)
         {
         }
@@ -18,7 +23,7 @@ namespace AulaSobreposicao.Entidades
             SaldoConta += valor;
         }
 
-        public override void Saque(double valor)
+        public sealed override void Saque(double valor)
         {
             base.Saque(valor);
 
