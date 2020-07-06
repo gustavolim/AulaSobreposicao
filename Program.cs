@@ -7,8 +7,11 @@ namespace AulaSobreposicao
     {
         static void Main(string[] args)
         {
-            ContaXY accxy = new ContaXY(222, "Ronaldo", 500);
-            ContaX accx = new ContaX(524, "Felipe", 500);
+
+            Conta accxy = new ContaXY(222, "Ronaldo", 500);
+            Conta accx = new ContaX(524, "Felipe", 500,200);
+
+
 
             accxy.Saque(50.00);
             accx.Saque(50.00);
